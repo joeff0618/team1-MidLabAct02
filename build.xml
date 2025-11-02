@@ -6,14 +6,14 @@
     <!--  Help Command  -->
     <target name="help">
         <echo message="Available targets:"/>
-        <echo message="  ant init           = setup build folders"/>
-        <echo message="  ant clean          = delete build folders"/>
-        <echo message="  ant compile        = compile all .java files"/>
-        <echo message="  ant compile.single = -Dfile=path/to/Class.java"/>
-        <echo message="  ant run            = run default main class"/>
-        <echo message="  ant run.single     = -Dclassname=package.ClassName"/>
-        <echo message="  ant javadoc        = generate documentation"/>
-        <echo message="  ant jar            = create classes JAR"/>
+        <echo message="     ant init           = setup build folders"/>
+        <echo message="     ant clean          = delete build folders"/>
+        <echo message="     ant compile        = compile all .java files"/>
+        <echo message="     ant compile.single = -Dfile=path/to/Class.java"/>
+        <echo message="     ant run            = run default main class"/>
+        <echo message="     ant run.single     = -Dclassname=package.ClassName"/>
+        <echo message="     ant javadoc        = generate documentation"/>
+        <echo message="     ant jar            = create classes JAR"/>
     </target>
 
     <!--  Create and Cleaning  -->
