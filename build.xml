@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <project name="TeamJavaSolutions" default="help" basedir=".">
     <!--  Properties  -->
+    <property name="src.dir" value="src"/>
     <property file="build.properties"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="doc.dir" value="docs"/>
 
     <!--  Help Command  -->
     <target name="help">
@@ -49,4 +53,38 @@
 	</target>
 
     <!-- TODO Add so on...   -->
+
+    <!-- Run the main class -->
+    <target name="run" depends="compile">
+        <java classname="main.Main" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+    <!-- Compile all Java sources -->
+    <target name="compile" depends="init">
+        <echo message="Compiling source files..."/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false"/>
+        <echo message="Compilation finished."/>
+    </target>
+
+    <!-- Create JAR file -->
+    <target name="jar" depends="compile">
+        <echo message="Creating JAR file..."/>
+        <jar destfile="${dist.dir}/TeamJavaSolutions.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="main.Main"/>
+            </manifest>
+        </jar>
+        <echo message="JAR file created at ${dist.dir}/TeamJavaSolutions.jar"/>
+    </target>
+
+    <!-- Generate Javadoc -->
+    <target name="javadoc" depends="init">
+        <echo message="Generating documentation..."/>
+        <javadoc sourcepath="${src.dir}" destdir="${doc.dir}" author="true" version="true" use="true"/>
+        <echo message="Documentation created at ${doc.dir}"/>
+    </target>
 </project>
