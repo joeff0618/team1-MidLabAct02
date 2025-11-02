@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"Valid Parenthesis","h":"class solutions.stack.ValidParenthesis","k":"16","u":"solutions/stack/ValidParenthesis.html#valid-parenthesis-heading"}];updateSearchResults();
