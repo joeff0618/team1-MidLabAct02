@@ -62,8 +62,6 @@
         </java>
     </target>
 
-    <!-- TODO Run Single File  -->
-
     <!-- Generate Javadoc -->
     <target name="javadoc" depends="init">
         <echo message="Generating documentation..."/>
@@ -81,4 +79,16 @@
         </jar>
         <echo message="JAR file created at ${dist.dir}/Team1JavaSolutions.jar"/>
     </target>
+
+    <!-- Run a specific class with a main method -->
+    <target name="run.single" depends="compile">
+        <fail unless="classname" message="Please provide -Dclassname=package.ClassName"/>
+        <echo message="Running class: ${classname}"/>
+        <java classname="${classname}" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
 </project>
