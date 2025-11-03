@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"main","l":"Main"},{"p":"solutions.array","l":"PascalTriangle"},{"p":"solutions.array","l":"RemoveDuplicatesFromSortedArray"},{"p":"solutions","l":"Solution","k":"10"},{"p":"solutions.stack","l":"ValidParenthesis"}];updateSearchResults();
