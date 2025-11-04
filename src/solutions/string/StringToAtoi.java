@@ -1,4 +1,6 @@
-package solutions;
+package solutions.string;
+
+import solutions.Solution;
 
 public class StringToAtoi implements Solution {
     public int myAtoi(String s) {

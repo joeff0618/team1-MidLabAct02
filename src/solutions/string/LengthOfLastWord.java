@@ -1,6 +1,8 @@
-package solutions;
+package solutions.string;
 
-public class LengthOfLastWord implements Solution{
+import solutions.Solution;
+
+public class LengthOfLastWord implements Solution {
     public int lengthOfLastWord(String s) {
         int endIndex = s.length() -1;
 

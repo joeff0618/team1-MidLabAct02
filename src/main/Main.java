@@ -1,8 +1,8 @@
 package main;
 
-import solutions.LengthOfLastWord;
+import solutions.string.LengthOfLastWord;
 import solutions.Solution;
-import solutions.StringToAtoi;
+import solutions.string.StringToAtoi;
 import solutions.array.PascalTriangle;
 import solutions.array.RemoveDuplicatesFromSortedArray;
 import solutions.stack.ValidParenthesis;
