@@ -2,6 +2,7 @@ package main;
 
 import solutions.LengthOfLastWord;
 import solutions.Solution;
+import solutions.StringToAtoi;
 import solutions.array.PascalTriangle;
 import solutions.array.RemoveDuplicatesFromSortedArray;
 import solutions.stack.ValidParenthesis;
@@ -13,7 +14,7 @@ public class Main {
            new RemoveDuplicatesFromSortedArray(),
            new ValidParenthesis(),
            new LengthOfLastWord(),
-           new PascalTriangle()
+           new StringToAtoi()
         };
 
         for (Solution s : solutions) {
