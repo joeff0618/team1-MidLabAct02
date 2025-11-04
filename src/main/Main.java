@@ -1,6 +1,7 @@
 package main;
 
 import solutions.array.NQueens2;
+import solutions.string.HammingWeight;
 import solutions.string.IntegerToRoman;
 import solutions.string.LengthOfLastWord;
 import solutions.Solution;
@@ -18,7 +19,8 @@ public class Main {
            new LengthOfLastWord(),
            new StringToAtoi(),
            new NQueens2(),
-           new IntegerToRoman()
+           new IntegerToRoman(),
+           new HammingWeight()
         };
 
         for (Solution s : solutions) {
