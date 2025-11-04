@@ -3,6 +3,7 @@ package solutions.array;
 import solutions.Solution;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -39,7 +40,7 @@ public class PascalTriangle implements Solution {/**
 
 
         //Always list 1 at the first row
-        pascalTriangle.add(List.of(1));
+        pascalTriangle.add(Arrays.asList(1));
 
 
         // Build each subsequent row starting from the second row
