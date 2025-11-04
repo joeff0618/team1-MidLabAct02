@@ -1,5 +1,6 @@
 package main;
 
+import solutions.array.NQueens2;
 import solutions.string.LengthOfLastWord;
 import solutions.Solution;
 import solutions.string.StringToAtoi;
@@ -14,7 +15,8 @@ public class Main {
            new RemoveDuplicatesFromSortedArray(),
            new ValidParenthesis(),
            new LengthOfLastWord(),
-           new StringToAtoi()
+           new StringToAtoi(),
+           new NQueens2()
         };
 
         for (Solution s : solutions) {
