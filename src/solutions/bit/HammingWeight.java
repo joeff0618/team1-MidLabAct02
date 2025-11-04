@@ -1,4 +1,4 @@
-package solutions.string;
+package solutions.bit;
 
 import solutions.Solution;
 
