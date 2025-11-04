@@ -13,9 +13,9 @@
         <echo message="     ant run            = run default main class"/>
         <echo message="     ant run.single     = -Dclassname=package.ClassName"/>
         <echo message="     ant javadoc        = generate documentation"/>
-        <echo message="     ant jar            = create classes JAR"/>
+        <echo message="     ant jar            = create both JARs (classes + documentation)"/>
         <echo message="     ant jar.doc        = create JAR for the Documentation"/>
-        <echo message="     ant jar.all        = create both JARs (classes + documentation)"/>
+        <echo message="     ant jar.source     = create JAR for the Source Code"/>
     </target>
 
     <!--  Create and Cleaning  -->
@@ -79,7 +79,21 @@
     </target>
 
     <!-- Create JAR file -->
-    <target name="jar" depends="compile">
+    <target name="jar" depends="compile, javadoc">
+        <echo message="Creating JAR files for compiled classes and documentation..."/>
+
+        <jar destfile="${dist.dir}/${team.name}JavaSolutions.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+        </jar>
+        <echo message="Compiled classes JAR created at ${dist.dir}/${team.name}JavaSolutions.jar"/>
+
+        <jar destfile="${dist.dir}/${team.name}JavaSolutions-docs.jar" basedir="${doc.dir}"/>
+        <echo message="Documentation JAR created at ${dist.dir}/${team.name}JavaSolutions-docs.jar"/>
+    </target>
+
+    <target name="jar.source" depends="compile">
         <echo message="Creating JAR file..."/>
         <jar destfile="${dist.dir}/${team.name}JavaSolutions.jar" basedir="${build.dir}">
             <manifest>
@@ -91,20 +105,6 @@
 
     <target name="jar.doc" depends="compile, javadoc">
         <echo message="Creating JAR file for the documentation..."/>
-        <jar destfile="${dist.dir}/${team.name}JavaSolutions-docs.jar" basedir="${doc.dir}"/>
-        <echo message="Documentation JAR created at ${dist.dir}/${team.name}JavaSolutions-docs.jar"/>
-    </target>
-
-    <target name="jar.all" depends="compile, javadoc">
-        <echo message="Creating JAR files for compiled classes and documentation..."/>
-
-        <jar destfile="${dist.dir}/${team.name}JavaSolutions.jar" basedir="${build.dir}">
-            <manifest>
-                <attribute name="Main-Class" value="${main.class}"/>
-            </manifest>
-        </jar>
-        <echo message="Compiled classes JAR created at ${dist.dir}/${team.name}JavaSolutions.jar"/>
-
         <jar destfile="${dist.dir}/${team.name}JavaSolutions-docs.jar" basedir="${doc.dir}"/>
         <echo message="Documentation JAR created at ${dist.dir}/${team.name}JavaSolutions-docs.jar"/>
     </target>
