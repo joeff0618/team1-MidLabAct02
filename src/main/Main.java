@@ -1,6 +1,7 @@
 package main;
 
 import solutions.array.NQueens2;
+import solutions.string.IntegerToRoman;
 import solutions.string.LengthOfLastWord;
 import solutions.Solution;
 import solutions.string.StringToAtoi;
@@ -16,7 +17,8 @@ public class Main {
            new ValidParenthesis(),
            new LengthOfLastWord(),
            new StringToAtoi(),
-           new NQueens2()
+           new NQueens2(),
+           new IntegerToRoman()
         };
 
         for (Solution s : solutions) {
