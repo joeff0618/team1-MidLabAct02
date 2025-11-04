@@ -1,5 +1,6 @@
 package main;
 
+import solutions.LengthOfLastWord;
 import solutions.Solution;
 import solutions.array.PascalTriangle;
 import solutions.array.RemoveDuplicatesFromSortedArray;
@@ -10,7 +11,9 @@ public class Main {
         Solution[] solutions = {
            new PascalTriangle(),
            new RemoveDuplicatesFromSortedArray(),
-           new ValidParenthesis()
+           new ValidParenthesis(),
+           new LengthOfLastWord(),
+           new PascalTriangle()
         };
 
         for (Solution s : solutions) {
